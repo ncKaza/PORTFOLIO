@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 body {
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: system-ui;
     background-color: #1e1e2f;
     color: #f0f0f0;
     scroll-behavior: smooth;
