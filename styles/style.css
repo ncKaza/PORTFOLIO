@@ -1,19 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 
+/* ...existing code... */
+#animated-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    background: transparent;
+}
+/* Pour que le contenu soit au-dessus du fond animé */
+body > *:not(#animated-bg) {
+    position: relative;
+    z-index: 1;
+}
+/* ...existing code... */
 
 body {
     margin: 0;
     font-family: "Libertinus Sans";
-    background-color: #1e1e2f;
+    background-color: rgb(0, 0, 0);
     color: #f0f0f0;
     scroll-behavior: smooth;
 }
 
 header {
-    background-color: #2a2a40;
+    background-color: #333;
     padding: 1rem 2rem;
-    display: flex;
+    display: flex; 
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -82,17 +98,12 @@ a:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #2a2a40;
+    background-color: #191919;
     font-size: 0.9rem;
     color: #888;
     margin-top: 4rem;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
-}
 
 @keyframes fadeInUp {
     to {
