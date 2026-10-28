@@ -1,8 +1,8 @@
 # Portfolio d’Alexis Pidjo
 
-Portfolio personnel BTS SIO option SLAM : profil, parcours, compétences, projets, veille technologique et contact.
+Portfolio personnel d’un étudiant en **BTS SIO option SLAM** : profil, parcours, compétences, projets, veille technologique et contact.
 
-Site statique : HTML, CSS et JavaScript, sans framework ni outil de compilation.
+Site statique : **HTML, CSS et JavaScript**, sans framework ni outil de compilation.
 
 ## Arborescence
 

@@ -25,7 +25,7 @@
     {
       kind: "formation",
       title: "BTS SIO option SLAM",
-      org: "Formation · Nouméa",
+      org: "Formation",
       live: "En cours",
       period: "En cours",
       desc: "Solutions Logicielles et Applications Métiers : développement, bases de données, réseaux et cybersécurité.",
@@ -34,7 +34,7 @@
     {
       kind: "pro",
       title: "Stage de 1re année de BTS",
-      org: "SF2I · Nouméa",
+      org: "SF2I",
       live: "",
       period: "1re année de BTS",
       desc: "Premier stage en entreprise du BTS SIO option SLAM.",
