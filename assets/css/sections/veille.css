@@ -1,0 +1,66 @@
+/* assets/css/sections/veille.css — Section Veille technologique */
+
+.veille h3 {
+  font-size: 1.5rem;
+}
+
+.veille > p {
+  max-width: 62ch;
+  margin-bottom: 22px;
+}
+
+.veille .btn {
+  margin-top: 22px;
+}
+
+.sources__title {
+  margin: 40px 0 18px;
+  font-family: var(--serif);
+  font-size: 1.4rem;
+}
+
+.sources {
+  list-style: none;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin: 0;
+  padding: 0;
+}
+
+.source {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.source__name {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+}
+
+.source__name a {
+  color: var(--text);
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+.source__name a:hover {
+  color: var(--accent-text);
+}
+
+.source p {
+  flex: 1;
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+}
+
+.source__lang {
+  align-self: flex-start;
+  padding: 3px 12px;
+  border-radius: 99px;
+  background: var(--soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+}

@@ -1,0 +1,12 @@
+/* assets/css/sections/footer.css — Pied de page */
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 34px 24px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent-text);
+}

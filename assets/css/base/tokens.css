@@ -1,0 +1,88 @@
+/* assets/css/base/tokens.css — Variables : couleurs, ombres, polices (thèmes jour et nuit)
+   Palette : bleu nuit + cyan (nuit) · blanc cassé + bleu profond (jour), violet discret en second accent */
+
+:root {
+  /* Surfaces et texte */
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --soft: #eef4fa;
+  --line: #e2e8f0;
+  --line2: #cbd5e1;
+
+  /* Accents : --accent / --accent2 pour la décoration, --accent-text et --cta pour le texte et les boutons (contraste ≥ 4,5:1) */
+  --accent: #0284c7;
+  --accent2: #6366f1;
+  --accent-text: #0369a1;
+  --cta: #0369a1;
+  --on-cta: #ffffff;
+
+  /* Couleurs des cartes de compétences */
+  --teal: #0f766e;
+  --teal-soft: #ddf1ef;
+  --slate: #475569;
+  --slate-soft: #e2e8f0;
+  --violet: #6366f1;
+  --violet-soft: #e8e9fc;
+
+  /* Bandeau d'accueil */
+  --hero-a: #e8f2fb;
+  --hero-b: #dce4f8;
+  --hero-ink: #0f172a;
+  --hero-btn: #0f172a;
+  --hero-btn-ink: #ffffff;
+  --hero-grid: rgba(15, 23, 42, 0.07);
+  --hero-tag: rgba(255, 255, 255, 0.72);
+  --hero-tag-ink: #0f172a;
+
+  /* Ombres */
+  --sh1: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --sh2: 0 6px 18px rgba(15, 23, 42, 0.07);
+  --sh3: 0 16px 34px -16px rgba(15, 23, 42, 0.22);
+
+  /* Polices */
+  --serif: "Fraunces", Georgia, "Iowan Old Style", serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b1120;
+  --card: #151f32;
+  --text: #e5edf8;
+  --muted: #a7b4c8;
+  --soft: #1b2740;
+  --line: #334155;
+  --line2: #475569;
+
+  --accent: #38bdf8;
+  --accent2: #818cf8;
+  --accent-text: #38bdf8;
+  --cta: #38bdf8;
+  --on-cta: #0b1120;
+
+  --teal: #2dd4bf;
+  --teal-soft: #12343a;
+  --slate: #94a3b8;
+  --slate-soft: #1e293b;
+  --violet: #818cf8;
+  --violet-soft: #222550;
+
+  --hero-a: #0f1b33;
+  --hero-b: #1b2a4d;
+  --hero-ink: #f8fafc;
+  --hero-btn: #e5edf8;
+  --hero-btn-ink: #0b1120;
+  --hero-grid: rgba(148, 163, 184, 0.1);
+  --hero-tag: rgba(11, 17, 32, 0.55);
+  --hero-tag-ink: #e5edf8;
+
+  --sh1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --sh2: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --sh3: 0 16px 34px -16px rgba(0, 0, 0, 0.6);
+
+  color-scheme: dark;
+}

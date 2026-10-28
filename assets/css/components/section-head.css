@@ -1,0 +1,72 @@
+/* assets/css/components/section-head.css — En-tête commun à toutes les sections et animations d’apparition */
+
+.section-head {
+  position: relative;
+  margin-bottom: 48px;
+  padding-left: 22px;
+}
+
+/* Barre verticale dégradée à gauche du titre */
+.section-head::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  width: 5px;
+  border-radius: 5px;
+  background: linear-gradient(var(--accent), var(--accent2));
+}
+
+.section-head__label {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent-text);
+}
+
+.section-head__label::before {
+  content: "// ";
+  opacity: 0.6;
+}
+
+.section-title {
+  margin: 0;
+  max-width: 20ch;
+  font-family: var(--sans);
+  font-size: clamp(1.9rem, 5.2vw, 2.9rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.section-title em {
+  font-style: normal;
+  color: var(--accent-text);
+}
+
+.section-lede {
+  margin: 16px 0 0;
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.js .draw {
+  transition: stroke-dashoffset 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--draw-delay, 0ms);
+}
+
+.is-revealed .draw {
+  stroke-dashoffset: 0;
+}
+
+html:not(.js) .draw {
+  stroke-dashoffset: 0;
+}

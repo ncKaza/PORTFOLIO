@@ -1,0 +1,267 @@
+/* assets/css/sections/skills.css — Section Compétences : cartes et bande des méthodes */
+
+.skills__grid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.skill {
+  --tone: var(--accent);
+  --tone-soft: var(--soft);
+  position: relative;
+  overflow: hidden;
+  padding: 28px 26px 30px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--card);
+  box-shadow: var(--sh1);
+  transition:
+    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.7s,
+    border-color 0.7s;
+}
+
+.skill[data-tone="teal"] {
+  --tone: var(--teal);
+  --tone-soft: var(--teal-soft);
+}
+
+.skill[data-tone="slate"] {
+  --tone: var(--slate);
+  --tone-soft: var(--slate-soft);
+}
+
+.skill[data-tone="violet"] {
+  --tone: var(--violet);
+  --tone-soft: var(--violet-soft);
+}
+
+.skill::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 4px;
+  background: var(--tone);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  border-color: var(--line2);
+  box-shadow: var(--sh3);
+}
+
+.skill:hover::before {
+  transform: scaleX(1);
+}
+
+.skill__icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, var(--card) 0 22%, var(--tone-soft) 70%);
+  box-shadow:
+    inset 0 0 0 1px #fffc,
+    0 0 0 1px color-mix(in srgb, var(--tone) 18%, transparent);
+  color: var(--tone);
+  transition: transform 0.75s cubic-bezier(0.34, 1.12, 0.64, 1);
+}
+
+.skill__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.skill__icon::before,
+.skill__icon::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -2px;
+  width: 9px;
+  aspect-ratio: 1;
+  border: 1.5px solid;
+  border-radius: 50%;
+  opacity: 0;
+  transition:
+    transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.6s;
+}
+
+.skill__icon::after {
+  top: 14px;
+  right: -9px;
+  width: 6px;
+}
+
+.skill:hover .skill__icon {
+  transform: translateY(-4px) scale(1.06);
+}
+
+.skill:hover .skill__icon::before {
+  opacity: 0.45;
+  transform: translate(4px, -14px);
+}
+
+.skill:hover .skill__icon::after {
+  opacity: 0.35;
+  transform: translate(7px, -24px);
+  transition-delay: 0.08s;
+}
+
+.skill__title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.skill__caption {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.skill__list {
+  list-style: none;
+  display: grid;
+  gap: 2px;
+  margin: 22px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.skill__item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 7px 10px;
+  margin-inline: -10px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition:
+    background-color 0.5s,
+    color 0.5s,
+    transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skill__item:hover {
+  background: var(--soft);
+  color: var(--text);
+  transform: translateX(4px);
+}
+
+.skill__item.is-core {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.skill__bullet {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border: 1.5px solid var(--line2);
+  border-radius: 50%;
+}
+
+.skill__item.is-core .skill__bullet {
+  border-color: var(--tone);
+  background: var(--tone);
+  box-shadow: 0 0 0 3px var(--tone-soft);
+}
+
+.skill__count {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--line);
+  transition: color 0.7s;
+}
+
+.skill:hover .skill__count {
+  color: var(--tone-soft);
+}
+
+/* Méthodes & savoir-faire */
+.methods {
+  display: grid;
+  gap: 22px;
+  margin-top: 28px;
+  padding: 30px 26px;
+  border: 1px dashed var(--line2);
+  border-radius: 28px;
+  background: color-mix(in srgb, var(--card) 50%, transparent);
+}
+
+@media (min-width: 1024px) {
+  .methods {
+    grid-template-columns: 200px minmax(0, 1fr);
+    align-items: center;
+    gap: 30px;
+    padding: 34px;
+  }
+}
+
+.methods__title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.19rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+.methods__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.methods__item {
+  padding: 8px 15px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition:
+    transform 0.6s cubic-bezier(0.34, 1.12, 0.64, 1),
+    border-color 0.55s,
+    color 0.55s;
+}
+
+.methods__item:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-text);
+  color: var(--accent-text);
+}
