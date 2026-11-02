@@ -77,7 +77,7 @@ Ouvre simplement `index.html` dans un navigateur. Aucune installation n’est n�
 
 1. Crée un dépôt GitHub (par exemple `PORTFOLIO`) et envoie-y le contenu de ce dossier.
 2. Dans **Settings → Pages**, choisis la branche `main` et le dossier `/ (root)`.
-3. Le site est disponible à l’adresse `https://ncKaza.github.io/portfolio/`.
+3. Le site est disponible à l’adresse `https://nckaza.github.io/PORTFOLIO/` (le nom du dépôt respecte les majuscules).
 
 ## Mise en forme du code
 
