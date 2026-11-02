@@ -42,7 +42,11 @@
 
   function buildCard(project) {
     var profileUrl = "https://github.com/" + P.config.github;
-    var repoUrl = project.repo ? profileUrl + "/" + project.repo : profileUrl; // sans dépôt précisé : profil GitHub
+    var repoUrl = profileUrl; // sans dépôt précisé : profil GitHub
+    if (project.repo) {
+      // URL complète (dépôt d'un autre compte) ou simple nom d'un de mes dépôts
+      repoUrl = /^https?:\/\//.test(project.repo) ? project.repo : profileUrl + "/" + project.repo;
+    }
     var mainUrl = project.demo || repoUrl; // cible du clic sur la carte
 
     var title = u.el("h3", { class: "project__title" }, [
